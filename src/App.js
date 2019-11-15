@@ -11,7 +11,8 @@ const App = () => {
   const redux_add = (todo) => dispatch(appActions.redux_add(todo));
   const redux_delete = (id) => dispatch(appActions.redux_delete(id));
 
-  return <ToDo list={list} redux_add={redux_add} redux_delete={redux_delete} />;
+  const props = { list, redux_add, redux_delete };
+  return <ToDo {...props} />;
 };
 
 export default App;
