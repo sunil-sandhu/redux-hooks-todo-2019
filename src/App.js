@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
   const list = useSelector((store) => store.appReducer.list);
-  const dispatch = useDispatch(appActions);
+  const dispatch = useDispatch();
 
   const redux_add = (todo) => dispatch(appActions.redux_add(todo));
   const redux_delete = (id) => dispatch(appActions.redux_delete(id));
